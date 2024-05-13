@@ -10,9 +10,9 @@ typedef struct
 {
     char *nombre;
     int edad;
-} persona;
+} persona;s
 
-// Definición de la estructura para un nodo de la lista enlazada
+// Crear la estructura de un nodo de la lista enlazada
 typedef struct nodo
 {
     persona persona;
@@ -38,7 +38,7 @@ void liberar_memoria(HashTable tabla);
 
 int main()
 {
-    // Crear la tabla hash e inicializar todas las celdas a NULL
+    // Crear la hash table e inicializar todas las celdas a NULL
     HashTable tabla;
     for (int i = 0; i < SIZE; i++)
     {
@@ -61,7 +61,7 @@ int main()
 }
 
 
-// Función para insertar una persona en la tabla hash
+// Función para insertar una persona en la hash table
 void insertar(HashTable *tabla, char *nombre, int edad)
 {
     char inicial = nombre[0];
@@ -74,11 +74,11 @@ void insertar(HashTable *tabla, char *nombre, int edad)
     tabla->tabla[indice] = nuevoNodo;
 }
 
-// Función para imprimir toda la tabla hash
+// Función para imprimir toda la hash table
 void imprimir_tabla(HashTable tabla)
 {
-    // Imprimir toda la tabla hash
-    printf("Tabla Hash:\n");
+    // Imprimir toda la hash table
+    printf("hash table:\n");
     for (int i = 0; i < SIZE; i++)
     {
         nodo *temp = tabla.tabla[i];
@@ -92,7 +92,7 @@ void imprimir_tabla(HashTable tabla)
     }
 }
 
-// Función para liberar la memoria de la tabla hash
+// Función para liberar la memoria de la hash table
 void liberar_memoria(HashTable tabla)
 {
     for (int i = 0; i < SIZE; i++)
